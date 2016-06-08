@@ -1,0 +1,109 @@
+Let's do this. Woo.
+# still comments out code. Always fun. Is this the case for all languages, or is it just common?
+Print outputs text strings
+A variable stores a piece of data, no matter what that piece is. 
+Assigning thigns to variables is still <variable = thing>
+From here on out I'm gonna try to mark example code with <>
+Variables can store numbers, booleans, and other stuff I'm sure
+I think typical style is to indent with four spaces. 
+Is there a difference between indenting with four spaces and TAB with tab set to be 4 spaces?
+Booleans have two possible values, true and false
+In python, True is not the same thing as true. Which is weird I think but whatever.
+ints and floats are still not the same thing. Latter has decimals, former does not. Can not. 
+Python bits of code that are empty on the end will have None on a seperate line at the end of their output. 
+Not sure what exactly constitutes it not being empty on the end.
+Does printing something turn it into a string before outputting it, like Ruby does?
+Re-assigning a variable still erases entirely what was there before, replacing it with the new assignation
+
+In python, indented space has a function beyond stylistic. 
+Indentation actually effects the running and functioning of code!
+When indentation is wrong, an IndentationError will be thrown out (not sure if that's the right term?)
+Functions are still a thing. I'll go over that later.
+Functions don't automatically print or return anything. 
+For functions to return anything upon being ran, the <return> keyword has to be actually used
+comments are still made using #
+Multi-line comments are done as such:
+"""multi-line comment starts here
+and continues
+and continues
+and ends
+"""
+Apparently it's also fine if the last set of quotation marks is on the same line as the last comment-line but whatever
+I think I like coding in Ruby better, it felt a lot more... fluid, and such. But I suppose Python will be fun too once I learn it\
+Basic math is still a thing. Following is assigning various variables from math <
+addition_var = 2 + 3
+subtraction_var = 11 - 3
+multiplication_var = 11 * 5
+division_var = 11 / 3>
+As with ruby, a math expression is essentially in a parentheses, and ONLY the value that is returned from the parentheses as a 
+whole matter s to the rest of the code. What fun what fun.
+As always, numbers can be combined with other code objects to make more complex-programs.
+Exponents and exponentation are still a thing, oh boy.
+Both integers and floats can be exponentated <
+print 2.5 ** 2>
+yields 6.25
+So as you can see this shit works yo. What fun
+The exponentation sign is ** just like RUby
+LJike in Ruby, the space between numbers and signs is optional, though recommended, and obviously the spaces between numbers are mandatory
+modulo is still a thing, still returns the remainder from a division, still fun.
+<print 3 % 2>
+yields 1
+Modulo is still fun, can still be used to determine if something is odd, even, prime (with a little work), all that fun stuff
+Apparently codecademy has a pro version now, which has quizzes and the like. At least they didn't take anything form the free sections for it
+Strings are generally marked with quotation marks, and are made up of letters, numbers, all that stuff
+Pretty much any character available can be part of a string, and, unless modified, will not become active in any code-stuff near it.
+That is to say, even if we have "False", it still won't be recognized by Python as a boolean, because it's a string
+Escaping characters remains a thing, it's a way of making things be in strings that normally Python would recongnize as breaking the string
+So to make the string "We haven't got all day!", we would have to put in the code:
+<"We haven\'t got all day!">
+Because escaping is generally done with a backslash, you see.
+Like in Ruby, Python tracks the indexes of the characters in a string (and I'm assuming also in hashes and arrays and such)
+Also like in Ruby (and I'm assuming every other language), tracking indices starts with 0, such that the first character's index is 0
+So, for example, we could do the following things:
+<string = "MONTY"
+print string[3]
+#would output "T"
+print "MONTY"[1]
+#Would output "O"
+>
+As you can see, the index of something is called using brackets.
+This can also be done directly on the string, or on a variable holding the string
+Remember that it's brackets, not parentheses! Parentheses are used for other things by python
+String methods are methods used to mess with strings, and the stuff inside 'em
+len() returns the length of a string. So:
+variables essentially return whatever they're holding.
+What this means is that we can also use an object wherever we'd normally use a variable holding the object. meaning we can do either 
+<print len(string_var)
+print len("string_var contents")>
+either would print out the length of the string there
+Oh, also, the parentheses after a method are where you put the method's target. Like above, the method acted upon the string_var variable
+wow
+I'm... not sure what the difference between object.method() and method(object) is, but... there is one.
+Anyway!
+lower() returns the string all lowercase
+upper() returns the string all-caps
+<string.lower()
+#returns "string contents"
+string.upper()
+#returns "STRING CONTENTS">
+str() turns non-strings into strings
+non-strings can still be printed, I'm assuming that Python also turns non-strings into strings before printing them
+methods that use dot notation ONLY WORK WITH STRINGS
+METHODS THAT USE DOT NOTATION ONLY WORK WITH STRINGS
+So.. there's the difference between them.
+len() returns the length of anything, not just strings
+Place where we write code is the editor
+Console is where result of code is shown
+Print displays code in the console (works on non-strings, but only by converting 'em to strings, so?)
+Strings can still be combined using concantenation. 
+It's basically like adding strings together. 
+They're just... spliced end to end. There is NO automatic spacing, or arranging, or anything like that.
+<print "spam " + "eggs"
+#outputs "spam eggs">
+Oh also concantenation is done with the plus sign. +. FYI
+<print "spam " and "and " and "eggs"> Only outputs "eggs". I wonder why?
+Concantenation does NOT work on non-strings. That is to say, python will not convert shit into strings just so you can concantenate.
+Workaround, if you have shit you wanna concantenate that ain't strings: use str()
+<print str(2) + " eggs"
+#outputs "2 eggs">
+wow
