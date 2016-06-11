@@ -107,3 +107,12 @@ Workaround, if you have shit you wanna concantenate that ain't strings: use str(
 <print str(2) + " eggs"
 #outputs "2 eggs">
 wow
+Wow let's do this again.
+<%s%> places the contents of a variable into a string. Like this.
+<print "This is %s land" % (variable)
+#outputs "this is variablecontent land">
+It also works more than once, wow
+<print "This is %s and %s land" % (variable1, variable2)
+#outputs "This is 1 and 2 land">
+wow. This formatting is really stupid looking. Whatever.
+The % operator after a string is used to combine that string with variables
