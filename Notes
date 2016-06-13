@@ -116,3 +116,26 @@ It also works more than once, wow
 #outputs "This is 1 and 2 land">
 wow. This formatting is really stupid looking. Whatever.
 The % operator after a string is used to combine that string with variables
+Python does not require you to put a 0 in front of floats. So shit like .053 is fine
+assignation stuff can still be done in a single line in more complicated ways than just var = stuff
+<meal = meal + meal * texper>
+Sets meal equal to itself plus itself times the percent of tax. Wow
+This is a common feature but still bears writing down
+Remember that variable assignations to not update!
+That is to say, if early in a program we set <trees = 5>, and <forest = trees * 2>, then later change trees to <trees = 32>, forest will still be 10!
+Time for more strings my dude!
+Need the same number of % terms in a string as there are assigned after the string
+raw_input takes the input provided to it (outputs a prompt at run-time), and returns that input as a string, which can then be assigned to a variable
+it can have a prompt attached to it, like so
+<raw_input("prompt right here")>
+this would output the prompt at run-time, then accept the provided input
+strings can be made either with double (") or single (') quotes, as well as this thing <str(stuff in the string)>. Not sure what's up with that last one
+the python module datetime concerns the date and time. Obviously
+It can be imported to a program by putting <from datetime import datetime> at the top of the program
+I'm guessing that the first part of that tells python what we're importing from, and the latter part tells it what to import from it.
+From that, can guess that python divides its libraries or whatever the term is into sections that make it necessary to specify what to import.
+datetime.now() returns the current date and time as a string
+.year .month and .day all return about what you'd expect as a string
+Remember that programming is generally case-sensitive, so %S is NOT the same as %s
+Alright, getting into some new stuff now. Woo!
+Control flow
