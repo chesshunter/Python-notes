@@ -127,8 +127,8 @@ Time for more strings my dude!
 Need the same number of % terms in a string as there are assigned after the string
 raw_input takes the input provided to it (outputs a prompt at run-time), and returns that input as a string, which can then be assigned to a variable
 it can have a prompt attached to it, like so
-<raw_input("prompt right here")>
-this would output the prompt at run-time, then accept the provided input
+<inputvar = raw_input("prompt right here")>
+this would output the prompt at run-time, then accept the provided input, then return the provided input, here storing it in inputvar
 strings can be made either with double (") or single (') quotes, as well as this thing <str(stuff in the string)>. Not sure what's up with that last one
 the python module datetime concerns the date and time. Obviously
 It can be imported to a program by putting <from datetime import datetime> at the top of the program
@@ -138,4 +138,114 @@ datetime.now() returns the current date and time as a string
 .year .month and .day all return about what you'd expect as a string
 Remember that programming is generally case-sensitive, so %S is NOT the same as %s
 Alright, getting into some new stuff now. Woo!
-Control flow
+Alright, let's do this! Control Flow!
+The simplest aspect of control flow is comparators. They compare two different values, and return a true or false value depending on the compared things.
+There are six comparators, which i think are roughly universal across languages.
+== equal to, returns True if equal (works with strings and other stuff too), returns False if not. Note that comparator is ==, assignor is =
+!= Not equal to, the inverse of ==
+< Less than, returns True if the first value is less than the second, False if otherwise.
+<= Less than or equal to, returns True if the first value is less than or equal to the second, False if otherwise.
+> Greater than, returns True if the first value is greater than the second, False if otherwise
+>= Greater than or equal to, returns True if the first value is greater than or equal to the second, False if otherwise
+I'm not honestly sure how the greater/less than's interact with strings and stuff like that, but == and != just check if they're the same string
+Oh, also, True and False are ALWAYS capitalized in Python. I'm not certain why, but it'll throw out errors if ya don't!
+Comparations can also be made more advanced! By which I mean parentheses and the like are acceptable, more complicated than just one operation!
+Somewhat simple example of that:
+<<truevalvar = (38**2) + 2 > 5 * (12 * 4)>> wow
+Boolean operators include And, Or, and Not
+I'm capitalizing them here so they're seperate from other words, but they don't have to be capitalized in code (can't be, in fact)
+And is a combinor: it combines two or more values, and ALL of them have to be true, or else the entire operation is False. 
+<<True and False and True and True>> this returns False
+Or is another combinor: it combines values, and only ONE of them has to be true to make the entire operation True.
+<<True or False or False>> returns True
+Not is an inverter: it essentially inverts whatever operation its attached to:
+<<not True and True>> returns False        <<not False and False and True>> returns True
+Generally, longer operations like these would make use of parentheses, even if that's not absolutely needed for the code to work. It just makes it easier to read!
+It's useful to think in terms of binary, with True and False as 1's and 0's, And as multiplication, and Or as addition.
+If you multiply 30 1's and a 0, then the result is still 0!
+If you add 30 0's and a 1, the result is still 1! 
+Slight caveat to that, though, is that every value greater than 1 is still basically 1 (multiple Trues is True)
+A note outside the current context: You can use print to verify things in your code! 
+That is, if you set something even midway through a long program, it will still print to the console, even if the program crashes later.
+So, this could be used for a lot of things! Checking what a variable is storing, checking where exactly a program crashes (though the interpreter should tell you that...)
+It's useful for a lot of things, and I wanted to write it down before I forgot!
+The order of Boolean logic is don ein the same way as arithmetic. That is, it keeps in mind parentheses and brackets and the like.
+It also has an order of operations, which follows the and-multiplication or-addition rules I mentioned earlier:
+Not is first, And is second, and Or is last. 
+So, negative signs, multiplication, then addition. Good way to think about it!
+Ex: <<True or not False and False>> returns True.
+Time for conditionals! Getting into real programming now!
+If is a statement that executes some code IF the attached statement is true. Note that it doesn't NEED a then after it!
+In place of where some languages (such as Ruby!) would use a Then, Python instead uses indented space!
+Also, if statements need colons after them...? Not sure what's up with that yet!
+Do remember that the code block after if statements can be longer than one line! It can be many!
+Functions/methods in Python will NEVER return anything UNLESS you explicitly use the Return keyword! Bears repeating!
+Else is a keyword we can add to an if statement. In the case that the attached statement is NOT true, the code attached to the Else will run.
+Elif stands for "else if". It's like an Else statement, except with an attached condition.
+This can be used for if we have multiple possible scenarios, but we want a different response to each one, instead of just If and Everything Else.
+Elif will only be checked if the initial If is not true!
+if-elif-else statements do NOT need End keywords, like in Ruby.
+It would seem that Then and End are replaced by indentation. That's novel!
+raw_input prompts the user at run-time, then returns the provided string. I covered it a bit earlier!
+IF only counts actual true/false values, does not work with anything else! (I think Ruby considered strings and integers to be True)
+.isalpha() returns True only if the string it's attached to does NOT contain numbers or anything like that.
+I don't think there's any modifiers in Python for modifying a variable in place. In ruby could add exclamation mark to end to modify it then place it back in variable
+It's possible to get slices of strings without using methods or anything (diff from rubY!)
+string[1:4] will return the second through fifth characters of a string!
+Remember that programming is flexible, so we can do things like this: string[1:len(string)]
+That's interesting.
+Now we're getting into functions
+A method is a function within a class. 
+It's often simpler to write a function when a block of code is going to be reused often. 
+If I remember correctly, it's somewhat slower at runtime because the computer has to go back to find the function, THEN run it.
+But... I think that's worth it, so we don't have to write out the same block of code 5 times.
+Functions are defined with three parts.
+The header: includes the DEF keyword which begins everything, the function's name, and any parameters it may have.
+A parameter is something that will be put into the code whenever the function is used, so as to make the function more flexible.
+<<def function(parameter)>> That's what the header will look like
+Generally, it's good to include a comment after the header which states what the function is supposed to do.
+The body of the function is the code that the function runs, and is indented. 
+Once again, python doesn't use an End keyword, it just uses indentation.
+As usual, the header must conclude with a colon. Putting it all together, we get:
+<<def function():
+  code goes here
+rest of program continues>> #what fun
+Huh. You can put comments off to the side of the rest of the code       #like this
+Things printed inside a function will still be output to the console
+Parameters are used to add flexibility to a function. Here's a simple example 
+<<def addition(number, number2)
+  return number + number2
+addition(2, 8)>> # this would return 10, cuz 2 + 8 = 10
+The parameter is defined within the function when it's first defined, arguments are passed in when the function is later called.
+In the above example, number and number2 are parameters, while 2 and 8 are arguments.
+Functions can also call each other, which is probably useful.
+<<def one_good_turn(n):
+    return n + 1
+    
+def deserves_another(n):
+    return one_good_turn(n) + 2>>
+A poor example I took right out of the codecademy class. That's right, I'm plagiarizing and I don't even care.
+There's a python module called Math that includes a lot of basic math functions and methods and stuff.
+We can import it, and other included modules, using import.
+To use functions and such from modules, we usually have to include the module's name when calling them, so that PYthon knows where to call from.
+So, to use the square root function from Math, we'd:
+<<import math
+math.sqrt(25)>> #bang, we just used the sqrt function. Wow.
+You can also import specific functions from modules:
+<<from math import sqrt>> We can now use the sqrt function from moth, without importing the whole module
+This follows the form <<from module import function>>
+If we want to import everything from the math module, but just have it be temporarily in Python, so we don't have to add math. to functions, we:
+from math import *
+This can be a bad idea, however, as it imports all the functions of math right into your program, without them being associated with a module.
+So, for example, if we had a sqrt() before importing, our function would get replaced with math's sqrt()!
+While that doesn't sound too bad, it's a problem that can be very bad in large-scale programming, because you have a LOT of work laying around, and you don't want it getting overwritten!
+if we just import math module itself, though, we're safe, because we then have both sqrt() AND math.sqrt()
+biggest_number()  smallest_number()  and distance_from_zero()  are all built-in functions, and do about what you would expect.
+max() returns the largest argument from a set of arguments. 
+Python seems to do odd things when comparing strings... It seems to usually count shorter strings as the larger?
+min(), unsurprisingly, returns the smallest argument of the provided set.
+abs() returns the absolute value of its argument.
+IMportant
+type() returns the type of argument it receives. IE: string, int, float, etc. 
+type("whoa") returns <type 'str'>
+I'm... not sure what that ^ thing is.
