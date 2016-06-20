@@ -299,4 +299,25 @@ New values can be added to dictionaries like assigning new items to lists, excep
 <<dictionary["key23"] = True>> just assigned some stuff to be true. 
 Like hashes, you can put lists inside dictionaries, making them no longer 1-dimensional.
 Values in dictionaries can be just straight-up deleted with the del keyword.
-<<del dict_name[key]
+<<del dict_name[key]>> removes the provided key and its value from the dictionary
+Can use ; (a semicolon) in place of a line break. So
+<<print "good" ; print "bad">> is the same as 
+<<print "good"
+print"bad">> How interesting right
+.remove(item) removes the first item that matches the argument from a list. 
+This is basically the same as using del list_name[index], but it's a bit simpler since we don't have to find the index of the thing we want deleted.
+my_dict = {
+    "fish": ["c", "a", "r", "p"],
+    "cash": -4483,
+    "luck": "good"
+}
+Here's an example of a multi-dimensional dictionary. Notice that "fish" contains a list. What's interesting is that we can still access the list itself, just a bit more complex:
+<<print my_dict["fish"][1]>> This would output the letter "a", the second letter in the fish list. Wow, nifty
+This is a good example of a programming concept: even if things don't LOOK like they're completely equivalent, they still are.
+Eg, we can apply .index() to a list in a variable, AND a list that's just been created (<<["fish", 2].index("fish")>>, for example)
+Note that dictionaries aren't really ordered, normally, so iterating through them will likely be in unpredictable orders.
+Dot notation is for class methods. That is, methods that specifically are for objects of a certain class.
+Hence, .sort() works with lists, but nothing else, because it is a method of the list class.
+Similarly, upper() works only with strings beacuse it is a string method.
+Other things, like len(), work with many types of objects, and thus NEVER use dot notation.
+Note the notation for creating a new dictionary with stuff in it. It's handy.
