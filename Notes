@@ -249,3 +249,54 @@ IMportant
 type() returns the type of argument it receives. IE: string, int, float, etc. 
 type("whoa") returns <type 'str'>
 I'm... not sure what that ^ thing is.
+Lists are another type of data. Datatype.
+There are other datatypes we know about, like the string, booleans, and integers.
+Lists can be created using an expression that looks like this:
+<<list_name = [item1, item2, item3...]
+Lists SEEM to just be one-dimensional arrays, from what I can tell... Which, if they behave similarly to Ruby, means they can contain
+any sort of datatype, as well as containing multiple types in the same room.
+items in lists have indexes (indices), just like the characters in strings. 
+Items in lists can be individually accessed just like the indiv. characters in strings, too. Syntax:
+<<list_name[2]>> would call the third item from the list (they start at zero, just like everything else)
+Lists can be created empty, obviously.
+List indexes act somewhat like variables, in that they can be assigned.
+So, for example, if animal_list contains strings with the names of 5 animals, we can put <<animal_list[2] = "tinger">>
+That will change the third item in the list to be the string "tinger". 
+However, if we try to assign a value that doesn't already exist, then Python will throw out an error.
+Assigning like this can NOT be used to add length to the list, only to replace what's already there. 
+What CAN add length to it, though, is the .append method (among others, obviously)
+just slap it on the end of a list with an argument, and it will add that argument to the end of the list.
+We can also take out slices of a list, without relying on a method (like one would have to in Ruby)
+The syntax for that has basically already been covered, but here it is again:
+<<list_name[0:2]>> this would return a list containing the first and second items in list_name.
+This is because the slice goes up to the index after the colon, but does NOT include the index after the colon
+Strings are BASICALLY just lists of characters. How silly's that.
+You can leave the after-colon index off, and it will go from the first index to the end. EG:
+<<animals[5:]>> would return the fifth through last indexes of the list. Nice
+You can also leave off the first, producing roughly the opposite effect, the first index up to the after-colon one.
+the .index method searches through a list (or prolly a string or array too), and returns the index of the first item matching the provided argument
+<<["cat", "dog", "animal", "eggplant", "bat", 32, True].index("bat")>> would return 4, as that's the first index at which an item matching "bat" can be found
+the .insert method inserts a provided item at the provided index, moving everything else down to fit it.
+Oh god we're getting into loops
+Loops are iterators, generally used to do a lot of stuff, with much less code than going through and typing it all manually.
+the for loop is a pretty simple one, and applies the same operation to all items of a list (well, unless you modified it with if/else or soemthing...)
+the basic syntax is thus:
+<<for variable in list_name:>> #the variable is the one assigned within the loop to the item modified with each iteration.
+list_name is the modified or affected list, obviously.
+The .sort() method sorts the contents of a list, according to magnitude. Thus, a list of integers and/or floats would be sorted in least to greatest.
+Booleans... True is probably one and False is probably 0
+Strings are... weird. I'm honestly not sure at all how sorting them works...
+Dictionaries are basically hashes from Ruby, I'm guessing.
+Basically, it's like a list, but instead of automatically assigned indices, each item has a key, which can be a string or number (just like a hash!)
+Each pair of item and key is called a key-value pair (also, the things I'm calling items are normally called values)
+Accessing items is just like with a list, except instead of an index we put in a key.
+Be careful when using keys that are strings, cuz they have to be spelled and capitalized correctly!
+Dictionaries are very handy, and useful for a lot of things, ya know?
+A pair of empty curly braces is an empty dictionary.
+That is to say, a dictionary has curly braces, list has braces
+empty_dictionary = {}
+New values can be added to dictionaries like assigning new items to lists, except that the newly-provided key can be anything. Nifty
+<<dictionary["key23"] = True>> just assigned some stuff to be true. 
+Like hashes, you can put lists inside dictionaries, making them no longer 1-dimensional.
+Values in dictionaries can be just straight-up deleted with the del keyword.
+<<del dict_name[key]
