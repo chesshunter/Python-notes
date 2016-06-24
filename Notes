@@ -88,8 +88,8 @@ string.upper()
 #returns "STRING CONTENTS">
 str() turns non-strings into strings
 non-strings can still be printed, I'm assuming that Python also turns non-strings into strings before printing them
-methods that use dot notation ONLY WORK WITH STRINGS
-METHODS THAT USE DOT NOTATION ONLY WORK WITH STRINGS
+methods that use dot notation only work within certain object classes.
+.lower() for example, only works with strings, as it is a string method.
 So.. there's the difference between them.
 len() returns the length of anything, not just strings
 Place where we write code is the editor
@@ -321,3 +321,11 @@ Hence, .sort() works with lists, but nothing else, because it is a method of the
 Similarly, upper() works only with strings beacuse it is a string method.
 Other things, like len(), work with many types of objects, and thus NEVER use dot notation.
 Note the notation for creating a new dictionary with stuff in it. It's handy.
+Element is a word for an item in a list, dictionary, or anything like that. So the first item in a list would be the first element. Ye
+.pop(index) removes the element at the provided index, as well asw returns it. 
+.remove(item) removes the provided item from a list (works like the .index(), by searching for the provided item. Except here it removes it)
+del(list_name[1]) will remove the item at the provided index, but not return it.
+At any time, a function or method may be modified. This includes methods and functions built into python!
+Though, that said, it should be noted that, to modify CLASS methods, one must first enter the method (through a process I don't know in python yet)
+Doing things inside of a function is generally no different from doing them anywhere else.
+I'm not exactly sure if the control location stuff from Ruby is in effect in Python.
