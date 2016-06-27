@@ -329,3 +329,29 @@ At any time, a function or method may be modified. This includes methods and fun
 Though, that said, it should be noted that, to modify CLASS methods, one must first enter the method (through a process I don't know in python yet)
 Doing things inside of a function is generally no different from doing them anywhere else.
 I'm not exactly sure if the control location stuff from Ruby is in effect in Python.
+range(x,y) returns a list of numbers starting at x and ending at y, by increments of 1 (so far as I can tell)(
+Do remember that you can increment through each element in a list using for x in List_Name. 
+You could also do this, if you like really needed to.
+<<def double_list(x):
+    for i in range(0, len(x)):
+        x[i] = x[i] * 2
+    return x>>
+This second method is much more useful if we need to modify the list, because it works using indexes.
+As stated, range() is used to generate lists. Bit more complicated than I htought tho!
+<<range(6) => [0,1,2,3,4,5] #range(stop), stopping at the number before provided stopping point (basically a list with x elements)
+range(1,6) => [1,2,3,4,5] #range(start, stop)
+range(1,6,3) => [1,4] #range(start, stop, step), step being the difference between consecutive elements. 3, in this case.
+Remember +=? It's a thing in Python too, and so are its brethren:
++= 
+-=
+*=
+/=
+combines something (int or float) with the contents of a variable, then stores the result in the variable
+5 += VariableContainingSix => VariableContainingSix == 11
+These are useful when taking totals, or anything like that. Basically, interactions between variables and numbers.
+adding * (int), where int is a number, can make certain commands repeat, like print.
+.join is used to combine the contents of a list into a string. 
+It does so in a somewhat odd manner, as shown here:
+<<letters = ['A', 'B', 'C']
+print "-".join(letters)>>
+This outputs 'A-B-C', which is the result of combining the items in the letters list with a '-' between them. 
