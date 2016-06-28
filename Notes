@@ -350,8 +350,18 @@ combines something (int or float) with the contents of a variable, then stores t
 5 += VariableContainingSix => VariableContainingSix == 11
 These are useful when taking totals, or anything like that. Basically, interactions between variables and numbers.
 adding * (int), where int is a number, can make certain commands repeat, like print.
-.join is used to combine the contents of a list into a string. 
+.join is used to combine the contents of a list into a string. Then returns said string.
 It does so in a somewhat odd manner, as shown here:
 <<letters = ['A', 'B', 'C']
 print "-".join(letters)>>
 This outputs 'A-B-C', which is the result of combining the items in the letters list with a '-' between them. 
+So... as you can see, .join is called on the thing that seperates the given list, rather than being called on the list itself. 
+I believe that means it is a string-class method?
+Much like Ruby, Python has built-in functions to return random stuff. 
+Like ruby, these have to be imported first (see the importing stuff above, and how it's best to import specific functions.
+So, for randomly generating integers, we'd use 
+<<from random import randint>>
+randint(x,y) returns a random integer that is between (inclusive) the two provided values.
+raw_input returns the user input provided at runtime as a string.
+Can print multiple things at once, by seperating them with a comma (print x, y, z), prints em all in one line (as possible)
+So here's something Python can apparently do. I'm not certain of the syntax yet, so here we go
