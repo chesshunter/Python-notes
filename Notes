@@ -365,3 +365,31 @@ randint(x,y) returns a random integer that is between (inclusive) the two provid
 raw_input returns the user input provided at runtime as a string.
 Can print multiple things at once, by seperating them with a comma (print x, y, z), prints em all in one line (as possible)
 So here's something Python can apparently do. I'm not certain of the syntax yet, so here we go
+<<if guess_row not in range(5) or guess_col not in range(5)>>
+Like, as you can see, it does an english-looking thing, that checks if our variable (or whatever wanna put there probably) is within the provided list.
+break is a command used to break out of a loop. Basically, it just stops Python from looping. Doesn't finish that iteration or anything.
+
+
+
+
+So apparently codecademy uses python 2.7. ... I thought I was learning Python 3. Sorta just assumed. ... I guess I'm going to switch
+To Learning Python the Hard Way now. I don't really like that resource but whatever. Let's just buckle down and get started..
+I'm not sure how much of the earlier notes taken are no longer usable, since I'm in Python three. We'll just have to see, and hope not too much...
+
+
+
+
+
+                                            PYTHON THREE NOTES WOO LET'S GO
+So, thing #1 I have learned about python 3 is that print is a function, rather than a statement. That is, one would use print("string") rather than print "string"
+
+
+Alright. So big obstacles already. There doesn't seem to be a Hard Way book for Python 3, so... please hold while I go try to find something for this
+
+To be completely honest I really like codecademy's setup. It doesn't have too much text, and actually focuses on doing stuff.
+It also has an interpreter built in, so that I didn't have to deal with all the shenanigans of working with command prompt...
+
+Finally have things set up decently. Had to update the PATH variable of windows.
+But now I can run python files within the directory cmd prompt is looking at using <<python (filename)>>
+Woo hoo. That only took liek a friggin hour! I'm so great at this! (god I hate being alive)
+I'm also here making the first copy of these notes into notepad ++. Go team.
