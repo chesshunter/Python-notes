@@ -393,3 +393,5 @@ Finally have things set up decently. Had to update the PATH variable of windows.
 But now I can run python files within the directory cmd prompt is looking at using <<python (filename)>>
 Woo hoo. That only took liek a friggin hour! I'm so great at this! (god I hate being alive)
 I'm also here making the first copy of these notes into notepad ++. Go team.
+
+Python 3 automatically makes division from integers into floats. That's a nice touch.
